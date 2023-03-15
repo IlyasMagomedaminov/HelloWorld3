@@ -103,17 +103,40 @@ public class Main {
 
     public static void task7 () {
         System.out.println("Задача 7:");
-        int one = 20;
+        int one = 51;
         int two = 5;
-        int three = 15;
+        int three = 51;
 
-        if(one > two && one > three){
-            System.out.println(one);
-        }else if(two > one && two > three){
-            System.out.println(two);
-        }else {
-            System.out.println(three);
+
+        if (one == two && one == three && two == three){
+            System.out.println("Все числа равны.");
+        }else if (one >= two && one >= three) {
+            if(one == two){
+                System.out.println("one and two equal: " + one);
+            } else if (one == three) {
+                System.out.println("one and three equal: " + one);
+            }else{
+                System.out.println("max: " + one);
+            }
+
+        } else if (two >= one && two >= three) {
+            if(one == two){
+                System.out.println("one and two equal: " + one);
+            } else if (two == three) {
+                System.out.println("two and three equal: " + two);
+            }else {
+                System.out.println("max: " + two);
+            }
+        } else if(three >= one && three >= two){
+            if(one == three){
+                System.out.println("one and three equal: " + one);
+            } else if (two == three) {
+                System.out.println("two and three equal: " + two);
+            }else {
+                System.out.println("max: " + three);
+            }
         }
+
     }
 
 }
